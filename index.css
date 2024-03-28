@@ -1,0 +1,74 @@
+body{
+  background-color:rgb(255, 157, 214);
+}
+
+h1{
+  font-family: "Pixelify Sans";
+  font-size: 60px;
+  width: 50%;
+  margin:auto;
+  text-align: center;
+}
+
+.board-container{
+  display:grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: fit-content;
+  margin: auto;
+}
+
+.board{
+  display:flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  box-shadow: 0px 0px 1px 1px grey;
+  background-color: #fff;
+}
+
+.row{
+  display:flex;
+  flex: 1;
+}
+
+.pixel{
+  flex: 1;
+}
+
+.pixel:hover{
+ border:1px solid grey;
+}
+
+.colors-container, .pixel-size-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: orchid;
+  width: 100px;
+  height: 400px
+}
+
+h2{
+  font-family: "pixelify sans";
+  font-size: large;
+}
+
+button{
+  width: 60px;
+  transition: border 200ms;
+  border: none;
+  box-shadow: 0px 0px 2px 0 black;
+  font-family: "pixelify sans";
+
+}
+
+button:hover{
+  border: black 1px solid ;
+}
+
+button:focus{
+  border: white 2px solid ;
+}
+
