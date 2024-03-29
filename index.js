@@ -1,10 +1,18 @@
-const board = document.getElementById("board");
 let size = 10;
+let draw = false;
+let color;
+
+const board = document.getElementById("board");
+const colorBtns = document.querySelectorAll (".color");
+const sizeBtns = document.querySelectorAll(".sizeBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 
 loadBoard (size);
 
-// Add a number of rows unto the board and add the same number of pixels into each row
+// ------------------------------------------
+
+// Add a number(size) of rows unto the board and add the same number of pixels into each row
 function loadBoard(size) {
   for (let i = 0; i < size; i++) {
     const row = document.createElement("div");
@@ -22,8 +30,7 @@ function loadBoard(size) {
 }
 
 // ------------------------------------------
-
-let draw = false;
+// colors of the divs(pixels) only change when you mouse down on board and move move over div
 
 board.addEventListener("mousedown", ()=> {
   draw = true;
@@ -41,10 +48,7 @@ board.addEventListener("mousemove", (e)=>{
 })
 
 // ------------------------------------------
-
-let color;
-
-const colorBtns = document.querySelectorAll (".color");
+// clicking on a color button sets color and clicking the eraser button sets color to white
 
 colorBtns.forEach((colorBtn)=>{
   colorBtn.addEventListener("click", (e) =>{
@@ -54,8 +58,7 @@ colorBtns.forEach((colorBtn)=>{
 })
 
 // ------------------------------------------
-
-const clearBtn = document.getElementById("clearBtn");
+// clicking the clear button loops through all the divs(pixels) and changes them to white
 
 clearBtn.addEventListener("click", ()=>{
   const pixels = board.querySelectorAll(".pixel");
@@ -66,8 +69,7 @@ clearBtn.addEventListener("click", ()=>{
 })
 
 // ------------------------------------------
-
-const sizeBtns = document.querySelectorAll(".sizeBtn");
+// Clicking a size button clears the board and reloads it with a different size
 
 sizeBtns.forEach((btn)=>{
   btn.addEventListener("click", (e)=>{

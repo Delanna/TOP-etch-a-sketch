@@ -34,13 +34,14 @@ h1{
 
 .pixel{
   flex: 1;
+  border: 1px solid white
 }
 
 .pixel:hover{
  border:1px solid grey;
 }
 
-.colors-container, .pixel-size-container{
+.colors-container, .board-settings-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +50,16 @@ h1{
   width: 100px;
   height: 400px
 }
+
+.pixel-size-container, .clear-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex:1;
+}
+
+
 
 h2{
   font-family: "pixelify sans";
